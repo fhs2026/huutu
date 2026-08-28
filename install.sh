@@ -3,7 +3,7 @@
 
 set -e
 
-DEB_URL="https://github.com/fhs2026/huutu/raw/refs/heads/main/fahasa-launcher_1.0.1_all.deb"
+DEB_URL="https://raw.githubusercontent.com/fhs2026/huutu/main/fahasa-launcher_1.0.1_all.deb"
 DEB_FILE="/tmp/fahasa-launcher_1.0.1_all.deb"
 
 echo "================================"
@@ -16,11 +16,11 @@ if ! command -v curl >/dev/null 2>&1; then
     sudo apt install -y curl
 fi
 
-echo "Đang tải fhs.deb..."
+echo "Đang tải gói cài đặt..."
 curl -fL "$DEB_URL" -o "$DEB_FILE"
 
 if [ ! -s "$DEB_FILE" ]; then
-    echo "Lỗi: Không tải được fhs.deb."
+    echo "Lỗi: Không tải được gói cài đặt."
     exit 1
 fi
 
